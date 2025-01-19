@@ -1,62 +1,116 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(45deg, black, rgb(25, 25, 69));
+
+body {
     height: 100vh;
+    margin: 0;
     display: flex;
-    /*centralizando a div*/
-    align-items: center ;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.tela-login {
+    background-color: black;
+    border: 1px solid #e9f035;
+    color: aliceblue;
+    width: 460px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(1, 1, 1, 0.5) , 0 0 15px #e9f035;
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.tela-login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 15px #6e720d;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 12px;
+    padding: 0;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+.tela-login form input {
+    padding: 12px;
+    width: 400px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
     justify-content: center;
 }
 
-.tela-login{
-    background-color: rgb(2, 3, 33);
-    color: aliceblue;
-    width: 340px;
-    padding: 20px;
-    /*arrendondamento de bordas*/
-    /*arrendondamento de bordas*/
-    border-radius: 8px;
-    /*sombra*/
-    box-shadow: 0 4px 10px rgb(70, 70, 70);
-    /*elementos um abaixo do outro*/
-    display: grid;
-    /*espaçamento entre os elementos*/
-    gap: 16px;
-    
+.tela-login form input:focus {
+    border-color: #e9f035;
+    box-shadow: 0 0 8px #e9f035;
 }
-form{
-    display: grid;
-    gap: 12px;
-}
-h1{
-    text-align: center;
-    /*fonte com iniciais maiúsculas*/
-    text-transform:  capitalize;
-    color: rgb(13, 51, 84);
-    
-}
-.tela-login form input{
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid;
-    /*linhas ao redor do input*/
-    outline: none;
-    border-color: rgb(9, 21, 49);
-}
-input[type="submit"]{
-    background-color: rgb(74, 74, 149);
-    color: aliceblue;
+
+input[type="submit"] {
+    background-color: #e9f035;
+    color: rgb(2, 3, 33);
     font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-a{
-    font-size: 12px;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(98, 96, 96);
+
+input[type="submit"]:hover {
+    background-color: #d4dc31;
+    color: black;
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #e9f035;
+    color: rgb(2, 3, 33);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}	
+
+button:hover {
+    background-color: #fbffab;
+    color: black;
+}
+
+.senhas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.eye {
+    width: 20px;
+    display: none;
 }

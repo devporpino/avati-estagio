@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link fa-light href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <title>Login</title>
+    
 </head>
 <body>
     <div class="tela-login">
-        <h1>login isaac newton</h1>
-        <form>
-            <input type="text" placeholder="Nome">
-            <input type="password" placeholder="Senha">
-            <input type="submit" value="Entrar">
+        <img src="./logo.png" alt="Logo" width="100px" class="logo">
+        <form id="login-form">
+            <input type="text" id="email" placeholder="Nome">
+            <div class="senhas">
+                <input type="password" id="password" placeholder="Senha">
+                <img src="./eye-regular.png" alt="eye" class="eye" id="eye">
+            </div>
+            <button type="button" id="login-button">Entrar</button>
+            
         </form>
-        <a href="#cadastro">Ainda não possui cadastro?</a>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
