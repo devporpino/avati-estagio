@@ -113,4 +113,5 @@ button:hover {
 .eye {
     width: 20px;
     display: none;
+    cursor: pointer;
 }

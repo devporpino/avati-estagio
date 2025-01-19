@@ -1,20 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loginButton = document.getElementById('login-button');
-    const loginForm = document.getElementById('login-form'); 
 
-    loginButton.addEventListener('click', function(event) {
-        event.preventDefault();  
+    loginButton.addEventListener('click', function (event) {
+        event.preventDefault(); 
 
-        const email = document.getElementById('email').value; 
-        const password = document.getElementById('password').value;  
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
 
         if (email === '' || password === '') {
             alert('Por favor, preencha todos os campos.');
-        }else{
-            alert('Login efetuado com sucesso!');
+            return;
         }
+
+        if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+            alert('Por favor, insira um email válido.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert('A senha deve ter no mínimo 6 caracteres.');
+            return;
+        }
+
+        alert('Login efetuado com sucesso!');
+
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        emailInput.value = '';
+        passwordInput.value = '';
+        
     });
 });
+
 
 let showPassword = false;
 
